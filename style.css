@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --light-blue: rgb(63, 62, 112);
+  --dark-blue: rgb(36, 41, 80);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  width: 100%;
+  height: max-content;
+  background-color: var(--light-blue);
+}
+
+.search {
+  color: white;
+  background-color: var(--light-blue);
+  font-size: 1.2rem;
+  border: 3px solid var(--dark-blue);
+  border-radius: 30px;
+  width: 250px;
+  height: 50px;
+  margin: 15px;
+  padding: 0 12px;
+}
+
+.search::placeholder {
+  color: rgb(117, 116, 202);
+}
+
+.search:focus {
+  background-color: var(--dark-blue);
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  margin: 15px;
+  background-color: var(--light-blue);
+  width: 350px;
+  height: max-content(500px, fit-content());
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.description {
+  position: absolute;
+  overflow: auto;
+  max-height: 100%;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+  transition: transform 0.3s;
+  padding: 30px;
+  transform: translateY(100%);
+  font-size: 1.44rem;
+}
+
+.card:hover .description {
+  transform: translateY(0);
+
+}
+
+.foot {
+  background-color: var(--light-blue);
+  padding: 22px 14px;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+
+.filmName {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.score {
+  background-color: var(--dark-blue);
+  padding: 0 10px;
+  width: max-content;
+  height: 35px;
+  border-radius: 5px;
+  color: red;
+  font-size: 1.20rem;
+  text-align: center;
+  align-self: center;
+  font-weight: bold;
+}
+
+.score p {
+  margin-top: 6px;
+  width: max-content;
+}
